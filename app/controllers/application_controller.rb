@@ -1,6 +1,7 @@
 require 'pry'
 
 class ApplicationController < Sinatra::Base
+
   configure do
     set :public_folder, 'public'
     set :views, 'app/views'
@@ -25,7 +26,7 @@ class ApplicationController < Sinatra::Base
     erb :show
   end
 
-  get '/recipes/:id/edit'
+  get '/recipes/:id/edit' do
     @recipe = Recipe.find(params[:id])
     erb :edit
   end
