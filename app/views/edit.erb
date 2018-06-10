@@ -1,6 +1,8 @@
 <h1>Recipe Editor</h1>
 
-<form action="/recipes" method="post">
+<form action="/recipes/<%= @recipe.id %>" method="post">
+
+  <input id="hidden" type="hidden" name="_method" value="patch">
 
   <label for="name">Name:
     <input type="text" name="name" id="name" value="<% @recipe.name %>">
