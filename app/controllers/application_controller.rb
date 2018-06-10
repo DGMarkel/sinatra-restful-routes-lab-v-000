@@ -23,6 +23,7 @@ class ApplicationController < Sinatra::Base
 
   get '/recipes/:id' do
     @recipe = Recipe.find_by(params[:id])
+    @ingredients = @recipe.ingredients.split(",")
     erb :show
   end
 
