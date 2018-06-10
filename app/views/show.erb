@@ -1,9 +1,13 @@
 <h1><%= @recipe.name %></h1>
+
 <h3>Ingredients:</h3>
-<ol>
-  <% @recipe.ingredients.each do |ingredient| %>
-  <li><%= ingredient %></li>
-  <% end %>
-</ol>
+
+  <ol>
+    <% @recipe.ingredients.each do |ingredient| %>
+    <li><%= ingredient %></li>
+    <% end %>
+  </ol>
+
 <h3>Cooktime: </h3>
-<p><%= @recipe.cook_time %>
+
+  <p><%= @recipe.cook_time %></p>
